@@ -1,7 +1,7 @@
 {
   "pages": {
     "login": {
-      "title": "Sign in to your account",
+      "title": "Log in to your account",
       "signin": "Sign in",
       "signup": "Sign up",
       "divider": "or",
@@ -13,9 +13,9 @@
         "validEmail": "Invalid email address"
       },
       "buttons": {
-        "submit": "Login",
+        "submit": "Log in",
         "forgotPassword": "Forgot password?",
-        "noAccount": "Don’t have an account?",
+        "noAccount": "Don't have an account? Sign up here",
         "rememberMe": "Remember me"
       }
     },
@@ -32,7 +32,7 @@
       }
     },
     "register": {
-      "title": "Sign up for your account",
+      "title": "Create an account",
       "fields": {
         "email": "Email",
         "password": "Password"
@@ -41,14 +41,14 @@
         "validEmail": "Invalid email address"
       },
       "buttons": {
-        "submit": "Register",
-        "haveAccount": "Have an account?"
+        "submit": "Sign up",
+        "haveAccount": "Already have an account? Sign in here"
       }
     },
     "updatePassword": {
-      "title": "Update password",
+      "title": "Update your password",
       "fields": {
-        "password": "New Password",
+        "password": "New password",
         "confirmPassword": "Confirm new password"
       },
       "errors": {
@@ -59,10 +59,10 @@
       }
     },
     "error": {
-      "info": "You may have forgotten to add the {{action}} component to {{resource}} resource.",
-      "404": "Sorry, the page you visited does not exist.",
-      "resource404": "Are you sure you have created the {{resource}} resource.",
-      "backHome": "Back Home"
+      "info": "You forgot to add the {{action}} component to the {{resource}}.",
+      "404": "This page does not exist.",
+      "resource404": "Did you create the {{resource}} resource?",
+      "backHome": "Back to home"
     }
   },
   "actions": {
@@ -74,11 +74,11 @@
   "buttons": {
     "create": "Create",
     "save": "Save",
-    "logout": "Logout",
+    "logout": "Log out",
     "delete": "Delete",
     "edit": "Edit",
     "cancel": "Cancel",
-    "confirm": "Are you sure?",
+    "confirm": "Confirm",
     "filter": "Filter",
     "clear": "Clear",
     "refresh": "Refresh",
@@ -86,20 +86,20 @@
     "undo": "Undo",
     "import": "Import",
     "clone": "Clone",
-    "notAccessTitle": "You don't have permission to access"
+    "notAccessTitle": "Access denied"
   },
-  "warnWhenUnsavedChanges": "Are you sure you want to leave? You have unsaved changes.",
+  "warnWhenUnsavedChanges": "Unsaved changes will be lost.",
   "notifications": {
-    "success": "Successful",
+    "success": "Success",
     "error": "Error (status code: {{statusCode}})",
-    "undoable": "You have {{seconds}} seconds to undo",
-    "createSuccess": "Successfully created {{resource}}",
-    "createError": "There was an error creating {{resource}} (status code: {{statusCode}})",
-    "deleteSuccess": "Successfully deleted {{resource}}",
-    "deleteError": "Error when deleting {{resource}} (status code: {{statusCode}})",
-    "editSuccess": "Successfully edited {{resource}}",
-    "editError": "Error when editing {{resource}} (status code: {{statusCode}})",
-    "importProgress": "Importing: {{processed}}/{{total}}"
+    "undoable": "You can undo this action within {{seconds}} seconds.",
+    "createSuccess": "{{resource}} created successfully.",
+    "createError": "Error creating {{resource}} (status code: {{statusCode}})",
+    "deleteSuccess": "{{resource}} deleted successfully.",
+    "deleteError": "Error deleting {{resource}} (status code: {{statusCode}})",
+    "editSuccess": "{{resource}} edited successfully.",
+    "editError": "Error editing {{resource}} (status code: {{statusCode}})",
+    "importProgress": "{{processed}} out of {{total}} items imported"
   },
   "loading": "Loading",
   "tags": {
@@ -108,53 +108,26 @@
   "dashboard": {
     "title": "Dashboard"
   },
-  "blog_posts": {
-    "blog_posts": "Blog Posts",
+  "law": {
+    "law": "Laws",
     "fields": {
-      "id": "Id",
+      "id": "ID",
       "title": "Title",
       "content": "Content",
       "status": "Status",
-      "createdAt": "Created At",
-      "category": "Category"
+      "createdAt": "Created at"
     },
     "titles": {
-      "create": "Create Blog Post",
-      "edit": "Edit Blog Post",
-      "list": "Blog Posts",
-      "show": "Show Blog Post"
-    }
-  },
-  "categories": {
-    "categories": "Categories",
-    "fields": {
-      "id": "Id",
-      "title": "Title",
-      "createdAt": "Created At"
-    },
-    "titles": {
-      "create": "Create Category",
-      "edit": "Edit Category",
-      "list": "Categories",
-      "show": "Show Category"
+      "list": "List",
+      "show": "Show"
     }
   },
   "documentTitle": {
     "default": "refine",
     "suffix": " | refine",
-    "blog_posts": {
-      "list": "Blog Posts | refine",
-      "show": "#{{id}} Show Blog Post | refine",
-      "edit": "#{{id}} Edit Blog Post | refine",
-      "create": "Create new Blog Post | refine",
-      "clone": "#{{id}} Clone Blog Post | refine"
-    },
-    "categories": {
-      "list": "Categories | refine",
-      "show": "#{{id}} Show Category | refine",
-      "edit": "#{{id}} Edit Category | refine",
-      "create": "Create new Category | refine",
-      "clone": "#{{id}} Clone Category | refine"
+    "law": {
+      "list": "Laws | refine",
+      "show": "View law #{{id}} | refine"
     }
   },
   "table": {

@@ -91,7 +91,7 @@ export const Header: React.FC<RefineThemedLayoutV2HeaderProps> = ({
                   <Avatar src={`/images/flags/${lang}.svg`} h={18} w={18} />
                 }
               >
-                {lang === "en" ? "English" : "German"}
+                {lang === "ja" ? "Japanese" : "English"}
               </MenuItem>
             ))}
           </MenuList>

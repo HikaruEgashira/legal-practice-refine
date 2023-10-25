@@ -6,10 +6,7 @@ import {
 } from "@refinedev/chakra-ui";
 import { Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
-import routerProvider, {
-  DocumentTitleHandler,
-  UnsavedChangesNotifier,
-} from "@refinedev/nextjs-router";
+import routerProvider, { DocumentTitleHandler } from "@refinedev/nextjs-router";
 import type { NextPage } from "next";
 import { AppProps } from "next/app";
 
@@ -73,24 +70,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
             i18nProvider={i18nProvider}
             resources={[
               {
-                name: "blog_posts",
-                list: "/blog-posts",
-                create: "/blog-posts/create",
-                edit: "/blog-posts/edit/:id",
-                show: "/blog-posts/show/:id",
-                meta: {
-                  canDelete: true,
-                },
-              },
-              {
-                name: "categories",
-                list: "/categories",
-                create: "/categories/create",
-                edit: "/categories/edit/:id",
-                show: "/categories/show/:id",
-                meta: {
-                  canDelete: true,
-                },
+                name: "law",
+                list: "/law",
+                show: "/law/show/:id"
               },
             ]}
             options={{
@@ -101,7 +83,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
           >
             {renderComponent()}
             {/* <RefineKbar /> */}
-            <UnsavedChangesNotifier />
+            {/* <UnsavedChangesNotifier /> */}
             <DocumentTitleHandler />
           </Refine>
           <DevtoolsPanel />

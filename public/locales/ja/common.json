@@ -1,0 +1,136 @@
+{
+  "pages": {
+    "login": {
+      "title": "アカウントにログイン",
+      "signin": "ログイン",
+      "signup": "登録",
+      "divider": "または",
+      "fields": {
+        "email": "メールアドレス",
+        "password": "パスワード"
+      },
+      "errors": {
+        "validEmail": "無効なメールアドレスです"
+      },
+      "buttons": {
+        "submit": "ログイン",
+        "forgotPassword": "パスワードをお忘れですか？",
+        "noAccount": "アカウントをお持ちでない方はこちら",
+        "rememberMe": "ログイン情報を保存する"
+      }
+    },
+    "forgotPassword": {
+      "title": "パスワードをお忘れですか？",
+      "fields": {
+        "email": "メールアドレス"
+      },
+      "errors": {
+        "validEmail": "無効なメールアドレスです"
+      },
+      "buttons": {
+        "submit": "リセット手順を送信する"
+      }
+    },
+    "register": {
+      "title": "アカウントを登録する",
+      "fields": {
+        "email": "メールアドレス",
+        "password": "パスワード"
+      },
+      "errors": {
+        "validEmail": "無効なメールアドレスです"
+      },
+      "buttons": {
+        "submit": "登録する",
+        "haveAccount": "すでにアカウントをお持ちの方はこちら"
+      }
+    },
+    "updatePassword": {
+      "title": "パスワードを更新する",
+      "fields": {
+        "password": "新しいパスワード",
+        "confirmPassword": "新しいパスワードの確認"
+      },
+      "errors": {
+        "confirmPasswordNotMatch": "パスワードが一致しません"
+      },
+      "buttons": {
+        "submit": "更新する"
+      }
+    },
+    "error": {
+      "info": "{{resource}}に{{action}}コンポーネントを追加するのを忘れています。",
+      "404": "このページは存在しません。",
+      "resource404": "{{resource}}リソースを作成しましたか？",
+      "backHome": "戻る"
+    }
+  },
+  "actions": {
+    "list": "一覧",
+    "create": "作成",
+    "edit": "編集",
+    "show": "表示"
+  },
+  "buttons": {
+    "create": "作成",
+    "save": "保存",
+    "logout": "ログアウト",
+    "delete": "削除",
+    "edit": "編集",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "filter": "フィルター",
+    "clear": "クリア",
+    "refresh": "更新",
+    "show": "表示",
+    "undo": "元に戻す",
+    "import": "インポート",
+    "clone": "複製",
+    "notAccessTitle": "アクセス権がありません"
+  },
+  "warnWhenUnsavedChanges": "保存されていない変更は破棄されます。",
+  "notifications": {
+    "success": "成功",
+    "error": "エラー (ステータスコード: {{statusCode}})",
+    "undoable": "{{seconds}}秒以内に元に戻すことができます。",
+    "createSuccess": "{{resource}}が正常に作成されました。",
+    "createError": "{{resource}}の作成中にエラーが発生しました (ステータスコード: {{statusCode}})",
+    "deleteSuccess": "{{resource}}が正常に削除されました。",
+    "deleteError": "{{resource}}の削除中にエラーが発生しました (ステータスコード: {{statusCode}})",
+    "editSuccess": "{{resource}}が正常に編集されました。",
+    "editError": "{{resource}}の編集中にエラーが発生しました (ステータスコード: {{statusCode}})",
+    "importProgress": "{{total}}件中{{processed}}件をインポートしました"
+  },
+  "loading": "読み込み中",
+  "tags": {
+    "clone": "複製"
+  },
+  "dashboard": {
+    "title": "ダッシュボード"
+  },
+  "law": {
+    "law": "法令",
+    "fields": {
+      "id": "ID",
+      "title": "タイトル",
+      "content": "内容",
+      "status": "ステータス",
+      "createdAt": "作成日時"
+    },
+    "titles": {
+      "list": "一覧",
+      "show": "表示"
+    }
+  },
+  "documentTitle": {
+    "default": "refine",
+    "suffix": " | refine",
+    "law": {
+      "list": "法令 | refine",
+      "show": "#{{id}} 法令の表示 | refine"
+    }
+  },
+  "table": {
+    "actions": "アクション"
+  }
+}
