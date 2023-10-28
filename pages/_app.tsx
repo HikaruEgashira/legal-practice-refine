@@ -12,7 +12,8 @@ import { AppProps } from "next/app";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { Header } from "@components/header";
-import dataProvider from "@refinedev/simple-rest";
+// import dataProvider from "@refinedev/simple-rest";
+import {dataProvider} from "../src/data-provider";
 import { appWithTranslation, useTranslation } from "next-i18next";
 import { AppIcon } from "src/components/app-icon";
 
@@ -65,7 +66,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
         <DevtoolsProvider>
           <Refine
             routerProvider={routerProvider}
-            dataProvider={dataProvider(API_URL)}
+            dataProvider={dataProvider as any} 
             notificationProvider={notificationProvider}
             i18nProvider={i18nProvider}
             resources={[
