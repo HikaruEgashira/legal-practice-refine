@@ -7,7 +7,7 @@ export default function CatchAll() {
 }
 
 export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
-  const translateProps = await serverSideTranslations(context.locale ?? "en", [
+  const translateProps = await serverSideTranslations(context.locale ?? "ja", [
     "common",
   ]);
 
