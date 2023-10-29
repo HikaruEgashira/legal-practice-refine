@@ -1,44 +1,41 @@
 import { DataProvider } from "@refinedev/core";
-import { IconLayoutRows } from "@tabler/icons";
 
 import api from "api/$api";
-import axios, { Axios, AxiosInstance } from "axios";
+import axios, { AxiosInstance } from "axios";
 import aspida from "@aspida/axios";
 
 //import { striginfy } from "query-stiring";
 
-const axiosConfig = { timeout: 3000, baseURL: "https://example.com/api" };
+const axiosConfig = { timeout: 3000, baseURL: "https://api.lawapi-prototype-test-elaws.e-gov.go.jp/api/2" };
 const client = api(aspida(axios as AxiosInstance, axiosConfig));
 
-export const dataProvider = (apiUrl: String) => ({
-    getList: async ({ resource }:any) => {
-        // const url = `${apiUrl}/${resource}`;
-        // if(resource === 'laws'){
-        //一覧取得
+export const dataProvider = (): Omit<
+    Required<DataProvider>,
+    "createMany" | "updateMany" | "deleteMany" | "getMany" | "create" | "update" | "delete" | "custom" | "deleteOne" | "getApiUrl"
+> => ({
+    getList: async ({ resource, pagination, filters, sorters, meta }) => {
+        const res = await client.laws.get()
 
-        const laws = await client.laws.get();
-
-        console.log(laws.body.count);
-        // }
-        // const { data, headers } = await axiosInstance.get(url);
-
-        // const total = +headers["x-total-count"];
+        const data = res.body.laws?.map(law => ({
+            id: law.law_info?.law_id,
+            ...law
+        })) ?? [];
+        const total = res.body.total_count ?? 0;
 
         return {
-            data: (laws.body.laws ??[]).map(datas=>({id:datas.law_info?.law_id??"" as string})),
-            total: laws.body.count
+            data: data as any,
+            total
+        }
+    },
 
+    getOne: async ({ resource, id, meta }) => {
+        const res = await client.laws.get({ query: { law_id: id.toString() } })
+        const data = res.body.laws?.find(law => law.law_info?.law_id === id)
+        return {
+            data: {
+                id: data?.law_info?.law_id,
+                ...data
+            } as any
         };
     },
-    getOne: async ({ resource,id }:any) =>{
-        const laws = await client.laws.get({query:{law_id:id.toString()}})
-
-        return {
-            data: laws as any
-            
-
-        };
-    
-    }
-
 });

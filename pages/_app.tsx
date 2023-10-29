@@ -12,12 +12,9 @@ import { AppProps } from "next/app";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { Header } from "@components/header";
-// import dataProvider from "@refinedev/simple-rest";
-import {dataProvider} from "../src/data-provider";
+import { dataProvider } from "../src/data-provider";
 import { appWithTranslation, useTranslation } from "next-i18next";
 import { AppIcon } from "src/components/app-icon";
-
-const API_URL = "https://api.fake-rest.refine.dev";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   noLayout?: boolean;
@@ -49,7 +46,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
     );
   };
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
 
   const i18nProvider = {
     translate: (key: string, params: object) => t(key, params),
@@ -59,14 +59,13 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout): JSX.Element {
 
   return (
     <>
-      {/* <GitHubBanner /> */}
       {/* <RefineKbarProvider actions={[]}> */}
       {/* You can change the theme colors here. example: theme={RefineThemes.Magenta} */}
       <ChakraProvider theme={RefineThemes.Green}>
         <DevtoolsProvider>
           <Refine
             routerProvider={routerProvider}
-            dataProvider={dataProvider as any} 
+            dataProvider={dataProvider as any}
             notificationProvider={notificationProvider}
             i18nProvider={i18nProvider}
             resources={[
