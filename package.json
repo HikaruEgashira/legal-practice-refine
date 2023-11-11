@@ -26,7 +26,7 @@
     "@refinedev/simple-rest": "^4.0.0",
     "@tabler/icons": "^1.1.0",
     "aspida": "^1.14.0",
-    "axios": "1.5.1",
+    "axios": "1.6.0",
     "next": "^13.0.6",
     "next-i18next": "^8.9.0",
     "nookies": "^2.5.2",
